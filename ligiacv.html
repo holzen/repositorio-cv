@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Ligia Beatriz Chuc Us</title>
+<style>
+    :root{
+        --primary:#17365D;
+        --secondary:#2F75B5;
+        --accent:#D9EAF7;
+        --light:#F6F8FB;
+        --text:#24313F;
+        --muted:#667788;
+        --white:#FFFFFF;
+    }
+    *{box-sizing:border-box;}
+    body{
+        margin:0;
+        font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+        background:#e9eef4;
+        color:var(--text);
+        line-height:1.55;
+    }
+    .cv{
+        max-width:1100px;
+        margin:30px auto;
+        background:var(--white);
+        box-shadow:0 12px 35px rgba(0,0,0,.12);
+        display:grid;
+        grid-template-columns:32% 68%;
+        min-height:1400px;
+    }
+    aside{
+        background:var(--primary);
+        color:var(--white);
+        padding:42px 30px;
+    }
+    main{
+        padding:42px 44px;
+    }
+    .avatar{
+        width:150px;
+        height:150px;
+        margin:0 auto 24px;
+        border-radius:50%;
+        border:5px solid rgba(255,255,255,.35);
+        background:linear-gradient(135deg, #dce8f4, #9fbdd7);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:var(--primary);
+        font-size:48px;
+        font-weight:700;
+    }
+    h1{
+        margin:0;
+        font-size:38px;
+        line-height:1.1;
+        color:var(--primary);
+    }
+    .subtitle{
+        margin-top:10px;
+        color:var(--secondary);
+        font-weight:600;
+        font-size:18px;
+    }
+    .intro{
+        margin:26px 0 30px;
+        padding:18px 20px;
+        background:var(--light);
+        border-left:5px solid var(--secondary);
+        border-radius:6px;
+    }
+    h2{
+        margin:30px 0 14px;
+        font-size:20px;
+        color:var(--primary);
+        border-bottom:2px solid var(--accent);
+        padding-bottom:7px;
+        text-transform:uppercase;
+        letter-spacing:.6px;
+    }
+    aside h2{
+        color:var(--white);
+        border-color:rgba(255,255,255,.3);
+        font-size:17px;
+        margin-top:28px;
+    }
+    .item{
+        margin-bottom:22px;
+    }
+    .item h3{
+        margin:0 0 4px;
+        color:var(--primary);
+        font-size:17px;
+    }
+    .meta{
+        font-size:13px;
+        color:var(--muted);
+        font-weight:600;
+        margin-bottom:7px;
+    }
+    ul{
+        margin:8px 0 0 20px;
+        padding:0;
+    }
+    li{margin-bottom:6px;}
+    aside ul{
+        margin-left:18px;
+    }
+    aside li{
+        margin-bottom:8px;
+    }
+    .contact{
+        font-size:14px;
+    }
+    .contact p{
+        margin:8px 0;
+        word-break:break-word;
+    }
+    .tag{
+        display:inline-block;
+        background:rgba(255,255,255,.14);
+        color:#fff;
+        padding:6px 10px;
+        border-radius:20px;
+        margin:4px 4px 4px 0;
+        font-size:13px;
+    }
+    .project{
+        background:var(--light);
+        padding:16px 18px;
+        border-radius:8px;
+        margin-bottom:18px;
+    }
+    .project strong{color:var(--primary);}
+    .note{
+        font-size:12px;
+        opacity:.85;
+        margin-top:26px;
+    }
+    .footer{
+        margin-top:28px;
+        padding-top:15px;
+        border-top:1px solid #dbe3ea;
+        font-size:12px;
+        color:var(--muted);
+    }
+    @media (max-width:800px){
+        .cv{grid-template-columns:1fr; margin:0;}
+        aside, main{padding:30px 24px;}
+        h1{font-size:31px;}
+    }
+    @media print{
+        body{background:white;}
+        .cv{
+            margin:0;
+            max-width:none;
+            box-shadow:none;
+        }
+        @page{
+            size:A4;
+            margin:0;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="cv">
+
+<aside>
+    <div class="avatar">LC</div>
+
+    <h2>Contacto</h2>
+    <div class="contact">
+        <p><strong>Nombre:</strong><br>Ligia Beatriz Chuc Us</p>
+        <p><strong>Ubicación:</strong><br>Yucatán, México</p>
+        <p><strong>Correo:</strong><br>Agregar correo profesional</p>
+        <p><strong>Teléfono:</strong><br>Agregar número</p>
+        <p><strong>LinkedIn:</strong><br>Agregar perfil</p>
+    </div>
+
+    <h2>Áreas de especialidad</h2>
+    <div>
+        <span class="tag">Bases de Datos</span>
+        <span class="tag">Ingeniería de Software</span>
+        <span class="tag">Programación</span>
+        <span class="tag">Ciencia de Datos</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Redes</span>
+        <span class="tag">Ciberseguridad</span>
+        <span class="tag">Evaluación Académica</span>
+    </div>
+
+    <h2>Competencias</h2>
+    <ul>
+        <li>Planeación y gestión académica.</li>
+        <li>Diseño y evaluación de proyectos de software.</li>
+        <li>Elaboración de instrumentos de evaluación y rúbricas.</li>
+        <li>Asesoría y evaluación de residencias profesionales.</li>
+        <li>Diseño de reactivos académicos.</li>
+        <li>Comunicación, liderazgo y trabajo colaborativo.</li>
+        <li>Vinculación académica e interinstitucional.</li>
+    </ul>
+
+    <h2>Tecnologías y herramientas</h2>
+    <ul>
+        <li>Python</li>
+        <li>Flask / Django</li>
+        <li>React</li>
+        <li>Bootstrap</li>
+        <li>PostgreSQL</li>
+        <li>SQL</li>
+        <li>scikit-learn</li>
+        <li>Power BI</li>
+        <li>Metodologías ágiles / SCRUM</li>
+    </ul>
+
+    <h2>Idiomas</h2>
+    <p>Español — Nativo</p>
+    <p>Inglés — Agregar nivel</p>
+
+    <h2>Datos por completar</h2>
+    <ul>
+        <li>Grado académico.</li>
+        <li>Instituciones de formación.</li>
+        <li>Fechas exactas de experiencia laboral.</li>
+        <li>Certificaciones.</li>
+        <li>Publicaciones y congresos.</li>
+    </ul>
+
+    <p class="note">Este CV fue estructurado con información profesional previamente compartida y puede personalizarse fácilmente editando el archivo HTML.</p>
+</aside>
+
+<main>
+    <header>
+        <h1>Ligia Beatriz Chuc Us</h1>
+        <div class="subtitle">Docente de Ingeniería en Sistemas Computacionales · Gestión Académica · Evaluación y Desarrollo de Proyectos Tecnológicos</div>
+    </header>
+
+    <div class="intro">
+        Profesional del área de Ingeniería en Sistemas Computacionales con experiencia en docencia, gestión académica, evaluación de proyectos, residencias profesionales, diseño de instrumentos de evaluación y vinculación institucional. Participa en actividades de evaluación académica nacional y desarrolla iniciativas de investigación orientadas al análisis de datos, aprendizaje automático y soluciones SaaS aplicadas al sector empresarial.
+    </div>
+
+    <h2>Experiencia académica y profesional</h2>
+
+    <div class="item">
+        <h3>Docente — Ingeniería en Sistemas Computacionales</h3>
+        <div class="meta">Instituto Tecnológico Superior Progreso · Tecnológico Nacional de México</div>
+        <ul>
+            <li>Impartición de asignaturas relacionadas con Fundamentos de Bases de Datos, Ingeniería de Software, Administración de Bases de Datos y Tópicos Avanzados de Programación.</li>
+            <li>Diseño de materiales didácticos, presentaciones, prácticas, exámenes, rúbricas e instrumentos de evaluación.</li>
+            <li>Asesoría y seguimiento académico a estudiantes de Ingeniería en Sistemas Computacionales.</li>
+            <li>Participación en actividades de tutoría y acompañamiento de grupos estudiantiles.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <h3>Gestión y coordinación académica</h3>
+        <div class="meta">Área de Ingeniería en Sistemas Computacionales</div>
+        <ul>
+            <li>Participación en actividades de academia, coordinación de eventos y seguimiento de compromisos académicos.</li>
+            <li>Organización de conferencias, mesas panel, actividades de inducción, colaboración interinstitucional y vinculación con egresados.</li>
+            <li>Elaboración de actas, minutas, oficios, cartas institucionales y documentos de seguimiento académico.</li>
+            <li>Apoyo en actividades relacionadas con créditos complementarios, seguimiento de estudiantes y comunicación institucional.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <h3>Evaluación de residencias profesionales y proyectos</h3>
+        <div class="meta">Ingeniería en Sistemas Computacionales</div>
+        <ul>
+            <li>Participación como sinodal en evaluación de anteproyectos y presentaciones finales de residencias profesionales.</li>
+            <li>Valoración de problemática, objetivos, complejidad técnica, arquitectura, bases de datos, redes, ciberseguridad, ingeniería de software y metodología.</li>
+            <li>Diseño de rúbricas para evaluación de proyectos de desarrollo de software, redes, ciberseguridad y proyectos tecnológicos empresariales.</li>
+            <li>Evaluación de viabilidad, entregables, indicadores, riesgos y pertinencia de soluciones implementadas en organizaciones.</li>
+        </ul>
+    </div>
+
+    <h2>Participación profesional y académica</h2>
+
+    <div class="item">
+        <h3>Evaluadora CACEI</h3>
+        <ul>
+            <li>Participación en procesos relacionados con evaluación y calidad de programas académicos de ingeniería.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <h3>Comité Académico EGEL Plus</h3>
+        <ul>
+            <li>Participación en actividades vinculadas con EGEL Plus en el área de Computación.</li>
+            <li>Experiencia como elaboradora y prevalidadora de reactivos.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <h3>Jurado — Rally Latinoamericano de Innovación</h3>
+        <ul>
+            <li>Participación en procesos de evaluación de propuestas y soluciones de innovación desarrolladas por equipos multidisciplinarios.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <h3>Red Temática de Inteligencia Artificial Ecos Yucatán</h3>
+        <ul>
+            <li>Participación como miembro en iniciativas de colaboración y vinculación relacionadas con inteligencia artificial.</li>
+        </ul>
+    </div>
+
+    <h2>Investigación y desarrollo tecnológico</h2>
+
+    <div class="project">
+        <strong>Plataforma SaaS inteligente para la predicción de riesgos operativos, rotación de personal y pérdidas económicas en empresas mediante análisis de datos y aprendizaje automático.</strong>
+        <p>Proyecto enfocado en el desarrollo de una plataforma SaaS segura y escalable que integra análisis de datos, indicadores empresariales, modelos predictivos y dashboards ejecutivos para apoyar la toma de decisiones.</p>
+        <ul>
+            <li>Modelos predictivos de rotación, riesgos y bajo desempeño.</li>
+            <li>Indicadores de costos y análisis de impacto económico.</li>
+            <li>Arquitectura multiusuario y multiempresa.</li>
+            <li>Integración mediante API con sistemas ERP y de recursos humanos.</li>
+            <li>Visualización ejecutiva mediante dashboards.</li>
+            <li>Validación con datos reales o simulados.</li>
+        </ul>
+    </div>
+
+    <h2>Docencia y contenidos desarrollados</h2>
+    <ul>
+        <li>Bases de datos: SQL, modelo entidad-relación, modelo relacional, normalización y álgebra relacional.</li>
+        <li>Ingeniería de software: requisitos, IEEE 830, pruebas, metodologías y gestión de proyectos.</li>
+        <li>Redes y ciberseguridad: VLAN, OSI/TCP-IP, ruteo, firewall, RADIUS, DHCP, hardening y seguridad de infraestructura.</li>
+        <li>Programación y desarrollo: diseño de soluciones, programación orientada a objetos y tecnologías web.</li>
+        <li>Habilidades blandas: comunicación asertiva, liderazgo, manejo de conflictos y trabajo en equipo para estudiantes de ingeniería.</li>
+    </ul>
+
+    <h2>Vinculación y actividades académicas</h2>
+    <ul>
+        <li>Colaboración interinstitucional con tecnológicos y cuerpos académicos.</li>
+        <li>Organización de visitas académicas y actividades de vinculación con centros de investigación.</li>
+        <li>Seguimiento a egresados y vinculación con empresas para conferencias, proyectos y residencias.</li>
+        <li>Participación en actividades orientadas a innovación, investigación y actualización profesional.</li>
+    </ul>
+
+    <h2>Objetivo profesional</h2>
+    <p>
+        Continuar fortaleciendo la formación de estudiantes de Ingeniería en Sistemas Computacionales mediante docencia de calidad, innovación educativa, investigación aplicada y vinculación con organizaciones, promoviendo proyectos tecnológicos que integren ingeniería de software, análisis de datos, inteligencia artificial y transformación digital.
+    </p>
+
+    <div class="footer">
+        CV profesional en formato HTML · Última actualización: agosto de 2026.
+    </div>
+</main>
+</div>
+</body>
+</html>
