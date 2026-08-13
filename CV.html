@@ -4,34 +4,1266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CV | Holzen Martínez</title>
+    <title>Holzen Martínez | Ciberseguridad & Sistemas</title>
 
     <style>
+        :root {
+            --bg: #0b1120;
+            --panel: #111827;
+            --panel-light: #172033;
+            --primary: #22d3ee;
+            --primary-dark: #0891b2;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --border: #263449;
+            --white: #ffffff;
+        }
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #eef1f5;
-            color: #263238;
+            font-family:
+                Inter,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(34, 211, 238, 0.08),
+                    transparent 30%
+                ),
+                var(--bg);
+
+            color: var(--text);
             line-height: 1.6;
         }
 
-        .cv {
-            max-width: 1100px;
-            margin: 35px auto;
-            background: white;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 40px auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background: linear-gradient(
+                135deg,
+                #111827,
+                #0f172a
+            );
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 45px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: "</>";
+            position: absolute;
+            right: 35px;
+            top: 20px;
+
+            font-family: monospace;
+            font-size: 100px;
+            font-weight: bold;
+
+            color: rgba(34, 211, 238, 0.05);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge {
+            display: inline-block;
+
+            padding: 6px 12px;
+
+            border: 1px solid rgba(34, 211, 238, 0.35);
+            border-radius: 30px;
+
+            color: var(--primary);
+
+            font-family: monospace;
+            font-size: 12px;
+
+            margin-bottom: 18px;
+        }
+
+        .header h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.1;
+            margin-bottom: 12px;
+            color: var(--white);
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+
+        .header p {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* =========================
+           GRID PRINCIPAL
+        ========================= */
+
+        .layout {
             display: grid;
-            grid-template-columns: 310px 1fr;
-            box-shadow: 0 10px 35px rgba(0,0,0,.12);
+            grid-template-columns: 280px 1fr;
+            gap: 25px;
+            margin-top: 25px;
+            align-items: start;
         }
 
         /* =========================
            SIDEBAR
-        ========================== */
-                                            [ Read 893 lines (converted from DOS format) ]
-^G Help         ^O Write Out    ^F Where Is     ^K Cut          ^T Execute      ^C Location     M-U Undo        M-A Set Mark
-^X Exit         ^R Read File    ^\ Replace      ^U Pas
+        ========================= */
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 24px;
+        }
+
+        .card-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-label {
+            display: block;
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .contact-value {
+            font-size: 13px;
+            word-break: break-word;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .skill {
+            background: var(--panel-light);
+            border: 1px solid var(--border);
+
+            padding: 6px 9px;
+
+            border-radius: 6px;
+
+            font-family: monospace;
+            font-size: 11px;
+
+            color: #cbd5e1;
+        }
+
+        .skill:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .section {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .section-number {
+            font-family: monospace;
+            color: var(--primary);
+            font-size: 13px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            color: var(--white);
+        }
+
+        .section-intro {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline-item {
+            padding-left: 25px;
+            padding-bottom: 28px;
+            border-left: 1px solid var(--border);
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+
+            left: -5px;
+            top: 5px;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+            background: var(--primary);
+
+            box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+        }
+
+        .timeline-date {
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 17px;
+            color: var(--white);
+            margin-bottom: 3px;
+        }
+
+        .timeline-company {
+            font-size: 13px;
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .timeline-description ul {
+            margin-left: 18px;
+            margin-top: 8px;
+        }
+
+        .timeline-description li {
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .project {
+            background: var(--panel-light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.2s ease;
+        }
+
+        .project:hover {
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .project h3 {
+            color: var(--white);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            color: var(--muted);
+            font-size: 12.5px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 12px;
+        }
+
+        .project-tag {
+            color: var(--primary);
+            font-family: monospace;
+            font-size: 10px;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-item {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 18px;
+            margin-bottom: 18px;
+        }
+
+        .education-item:last-child {
+            border: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .education-item h3 {
+            font-size: 16px;
+            color: var(--white);
+        }
+
+        .education-item p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           HIGHLIGHTS
+        ========================= */
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .highlight {
+            background: var(--panel-light);
+            border-radius: 10px;
+            padding: 18px;
+            border: 1px solid var(--border);
+        }
+
+        .highlight-number {
+            font-size: 25px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .highlight-text {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 11px;
+            padding: 30px 0;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+                margin: 15px auto;
+            }
+
+            .header {
+                padding: 30px 24px;
+            }
+
+            .header::after {
+                display: none;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 22px;
+            }
+        }
+
+        /* =========================
+           PRINT
+        ========================= */
+
+        @media print {
+
+            body {
+                background: white;
+                color: #111;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+
+            .header,
+            .card,
+            .section {
+                background: white;
+                border-color: #ddd;
+                box-shadow: none;
+            }
+
+            .header h1,
+            .section h2,
+            .timeline-title,
+            .project h3,
+            .education-item h3 {
+                color: #111;
+            }
+
+            .header h2,
+            .card-title,
+            .section-number,
+            .timeline-date,
+            .project-tag {
+                color: #087f9b;
+            }
+
+            .muted,
+            .header p,
+            .section-intro,
+            .timeline-description,
+            .project p,
+            .education-item p {
+                color: #444;
+            }
+
+            .layout {
+                grid-template-columns: 240px 1fr;
+            }
+
+            .project:hover {
+                transform: none;
+            }
+
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <span class="badge">
+                CYBERSECURITY · EDUCATION · RESEARCH
+            </span>
+
+            <h1>Holzen Martínez</h1>
+
+            <h2>
+                Profesor · Investigador · Especialista en Ciberseguridad
+            </h2>
+
+            <p>
+                Profesor de Tiempo Completo en Ingeniería en Sistemas
+                Computacionales, con experiencia en ciberseguridad,
+                pentesting, docencia universitaria, investigación,
+                desarrollo tecnológico y diseño de experiencias prácticas
+                de aprendizaje.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         CONTENIDO
+    =============================== -->
+
+    <div class="layout">
+
+
+        <!-- ==============================
+             SIDEBAR
+        =============================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- CONTACTO -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Contacto
+                </div>
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        Ubicación
+                    </span>
+
+                    <span class="contact-value">
+                        Yucatán, México
+                    </span>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        Área
+                    </span>
+
+                    <span class="contact-value">
+                        Sistemas Computacionales
+                    </span>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        Especialidad
+                    </span>
+
+                    <span class="contact-value">
+                        Ciberseguridad & Ciencia de Datos
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ESPECIALIDADES -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Especialidades
+                </div>
+
+                <div class="skills">
+
+                    <span class="skill">Pentesting</span>
+                    <span class="skill">Ethical Hacking</span>
+                    <span class="skill">Web Security</span>
+                    <span class="skill">OSINT</span>
+                    <span class="skill">CTF</span>
+                    <span class="skill">Forense</span>
+                    <span class="skill">Linux</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">SQL</span>
+                    <span class="skill">Git</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERRAMIENTAS -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Security Stack
+                </div>
+
+                <div class="skills">
+
+                    <span class="skill">Nmap</span>
+                    <span class="skill">Nessus</span>
+                    <span class="skill">OpenVAS</span>
+                    <span class="skill">GVM</span>
+                    <span class="skill">Burp Suite</span>
+                    <span class="skill">Hydra</span>
+                    <span class="skill">ffuf</span>
+                    <span class="skill">Kali Linux</span>
+                    <span class="skill">CTFd</span>
+                    <span class="skill">Moodle</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- OTRAS TECNOLOGÍAS -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Tecnologías
+                </div>
+
+                <div class="skills">
+
+                    <span class="skill">GitHub</span>
+                    <span class="skill">WordPress</span>
+                    <span class="skill">Cloudflare</span>
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">SQL</span>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==============================
+             MAIN
+        =============================== -->
+
+        <main class="main">
+
+
+            <!-- PERFIL -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <h2>
+                        Perfil profesional
+                    </h2>
+
+                </div>
+
+                <p class="section-intro">
+
+                    Profesional del área de tecnologías de información
+                    enfocado en la intersección entre educación,
+                    ciberseguridad e innovación tecnológica.
+
+                    Experiencia en la creación de laboratorios,
+                    escenarios de ataque controlados, retos CTF y
+                    actividades prácticas para la formación de
+                    profesionales en seguridad informática.
+
+                </p>
+
+                <div class="highlights">
+
+                    <div class="highlight">
+
+                        <div class="highlight-number">
+                            PTC
+                        </div>
+
+                        <div class="highlight-text">
+                            Profesor de Tiempo Completo
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+
+                        <div class="highlight-number">
+                            CTF
+                        </div>
+
+                        <div class="highlight-text">
+                            Aprendizaje práctico basado en retos
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+
+                        <div class="highlight-number">
+                            I+D
+                        </div>
+
+                        <div class="highlight-text">
+                            Investigación e innovación tecnológica
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EXPERIENCIA -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <h2>
+                        Experiencia profesional
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            ACTUALIDAD
+                        </div>
+
+                        <h3 class="timeline-title">
+                            Profesor de Tiempo Completo
+                        </h3>
+
+                        <div class="timeline-company">
+                            Instituto Tecnológico Superior de Progreso
+                        </div>
+
+                        <div class="timeline-description">
+
+                            <ul>
+
+                                <li>
+                                    Docencia en Ingeniería en Sistemas
+                                    Computacionales.
+                                </li>
+
+                                <li>
+                                    Formación en Ciberseguridad y
+                                    Ciencia de Datos.
+                                </li>
+
+                                <li>
+                                    Diseño de prácticas de Pentesting,
+                                    Ethical Hacking y seguridad web.
+                                </li>
+
+                                <li>
+                                    Diseño de retos CTF y laboratorios
+                                    de seguridad informática.
+                                </li>
+
+                                <li>
+                                    Desarrollo de actividades con
+                                    Nmap, Nessus, OpenVAS, Burp Suite,
+                                    Hydra y ffuf.
+                                </li>
+
+                                <li>
+                                    Diseño de experiencias de aprendizaje
+                                    basadas en gamificación.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            TECNOLOGÍA & SERVICIOS
+                        </div>
+
+                        <h3 class="timeline-title">
+                            Consultoría y servicios tecnológicos
+                        </h3>
+
+                        <div class="timeline-company">
+                            CSL Progreso · Computación Sin Límites
+                        </div>
+
+                        <div class="timeline-description">
+
+                            <ul>
+
+                                <li>
+                                    Diagnóstico y optimización de
+                                    equipos de cómputo.
+                                </li>
+
+                                <li>
+                                    Instalación y configuración
+                                    de software.
+                                </li>
+
+                                <li>
+                                    Soporte técnico a particulares
+                                    y empresas.
+                                </li>
+
+                                <li>
+                                    Asesoría tecnológica y soluciones
+                                    informáticas.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROYECTOS -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <h2>
+                        Proyectos destacados
+                    </h2>
+
+                </div>
+
+
+                <div class="projects">
+
+
+                    <article class="project">
+
+                        <h3>
+                            Observatorio Regional y Centro de Formación
+                            Comunitario en Seguridad Digital
+                        </h3>
+
+                        <p>
+                            Propuesta para fortalecer las capacidades
+                            regionales de prevención, formación y
+                            concientización en seguridad digital.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">
+                                #CYBERSECURITY
+                            </span>
+                            <span class="project-tag">
+                                #IMPACTOSOCIAL
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <h3>
+                            Punto Seguro
+                        </h3>
+
+                        <p>
+                            Proyecto tecnológico enfocado en seguridad
+                            urbana y generación de soluciones digitales
+                            con impacto social.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">
+                                #SOFTWARE
+                            </span>
+                            <span class="project-tag">
+                                #INNOVACIÓN
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <h3>
+                            Plataforma CTF
+                        </h3>
+
+                        <p>
+                            Diseño de escenarios y retos de
+                            ciberseguridad para formación práctica,
+                            utilizando CTFd y laboratorios controlados.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">
+                                #CTF
+                            </span>
+                            <span class="project-tag">
+                                #PENTESTING
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <h3>
+                            Sin pretexto para ser hackeado
+                        </h3>
+
+                        <p>
+                            Proyecto de divulgación y educación para
+                            fortalecer la autoprotección digital de
+                            usuarios no especializados.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">
+                                #DIVULGACIÓN
+                            </span>
+                            <span class="project-tag">
+                                #EDUCACIÓN
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <h3>
+                            TechFest
+                        </h3>
+
+                        <p>
+                            Participación en actividades de innovación,
+                            programación, ciberseguridad, CTF y
+                            desarrollo profesional.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">
+                                #TECH
+                            </span>
+                            <span class="project-tag">
+                                #CTF
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <h3>
+                            Laboratorio de Ciberseguridad
+                        </h3>
+
+                        <p>
+                            Diseño de propuestas de infraestructura
+                            tecnológica para fortalecer la enseñanza
+                            práctica de ciberseguridad.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">
+                                #LAB
+                            </span>
+                            <span class="project-tag">
+                                #SECURITY
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- FORMACIÓN -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <h2>
+                        Formación académica
+                    </h2>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h3>
+                        Doctorado en Sistemas Computacionales
+                    </h3>
+
+                    <p>
+                        Formación doctoral orientada a sistemas
+                        computacionales, tecnologías de información
+                        e investigación.
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h3>
+                        Ingeniería en Sistemas Computacionales
+                    </h3>
+
+                    <p>
+                        Formación profesional en sistemas,
+                        desarrollo de software, infraestructura
+                        y tecnologías de información.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- INVESTIGACIÓN -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <h2>
+                        Investigación
+                    </h2>
+
+                </div>
+
+                <p class="section-intro">
+
+                    Líneas de interés centradas en ciberseguridad,
+                    educación tecnológica, aprendizaje práctico,
+                    plataformas de entrenamiento y soluciones
+                    computacionales con impacto social.
+
+                </p>
+
+                <div class="skills">
+
+                    <span class="skill">
+                        Ciberseguridad educativa
+                    </span>
+
+                    <span class="skill">
+                        Seguridad ofensiva
+                    </span>
+
+                    <span class="skill">
+                        Pentesting
+                    </span>
+
+                    <span class="skill">
+                        Gamificación
+                    </span>
+
+                    <span class="skill">
+                        CTF
+                    </span>
+
+                    <span class="skill">
+                        Seguridad web
+                    </span>
+
+                    <span class="skill">
+                        Educación tecnológica
+                    </span>
+
+                    <span class="skill">
+                        Impacto social
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- PUBLICACIÓN -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+                    <h2>
+                        Divulgación
+                    </h2>
+
+                </div>
+
+                <div class="project">
+
+                    <h3>
+                        Sin pretexto para ser hackeado:
+                        Guía ciudadana de autoprotección digital
+                    </h3>
+
+                    <p>
+                        Proyecto editorial orientado a acercar la
+                        ciberseguridad a la población general,
+                        proporcionando conocimientos y prácticas
+                        para reducir riesgos digitales cotidianos.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <footer>
+
+        Holzen Martínez · Currículum Vitae · 2026
+
+    </footer>
+
+</div>
+
+</body>
+</html>
