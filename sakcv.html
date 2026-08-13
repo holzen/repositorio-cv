@@ -1,0 +1,639 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+
+    <style>
+        :root {
+            --primary: #7b1e3a;
+            --secondary: #b08d57;
+            --dark: #252525;
+            --light: #f5f5f5;
+            --text: #333;
+            --white: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #e9e9e9;
+            color: var(--text);
+            line-height: 1.55;
+        }
+
+        .cv {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: var(--white);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            box-shadow: 0 8px 30px rgba(0,0,0,.15);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background: var(--dark);
+            color: white;
+            padding: 35px 28px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .photo {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            margin: auto;
+            background: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ddd;
+            font-size: 14px;
+            border: 5px solid var(--secondary);
+        }
+
+        .sidebar h2 {
+            color: var(--secondary);
+            font-size: 18px;
+            margin-top: 30px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 8px;
+        }
+
+        .contact p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .skill {
+            margin: 13px 0;
+        }
+
+        .skill-name {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .bar {
+            height: 7px;
+            background: #555;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background: var(--secondary);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 9px;
+            margin: 3px;
+            border: 1px solid #777;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        /* MAIN */
+        .main {
+            padding: 45px;
+        }
+
+        .header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin: 0;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+
+        .header h3 {
+            margin: 5px 0 0;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 23px;
+            margin-bottom: 15px;
+            padding-bottom: 7px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .profile-text {
+            text-align: justify;
+        }
+
+        .timeline-item {
+            margin-bottom: 22px;
+            padding-left: 18px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+            color: var(--dark);
+        }
+
+        .timeline-item .date {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .timeline-item p {
+            margin-top: 7px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        .project {
+            padding: 16px;
+            margin-bottom: 15px;
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+        }
+
+        .project h3 {
+            margin: 0 0 5px;
+            color: var(--primary);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .footer {
+            text-align: center;
+            color: #777;
+            font-size: 12px;
+            margin-top: 35px;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .cv {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .cv {
+                grid-template-columns: 1fr;
+                margin: 0;
+            }
+
+            .main {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="cv">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="profile">
+            <div class="photo">
+                FOTO
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>Contacto</h2>
+
+            <!-- Completar con información personal -->
+            <p>📍 Progreso, Yucatán, México</p>
+            <p>📧 [correo electrónico]</p>
+            <p>📱 [teléfono]</p>
+            <p>🔗 [LinkedIn / portafolio]</p>
+            <p>💻 [GitHub]</p>
+        </div>
+
+        <div>
+            <h2>Áreas de especialidad</h2>
+
+            <span class="tag">Tecnología</span>
+            <span class="tag">Programación</span>
+            <span class="tag">Bases de datos</span>
+            <span class="tag">Git</span>
+            <span class="tag">Docencia</span>
+            <span class="tag">Tutorías</span>
+            <span class="tag">Marketing digital</span>
+            <span class="tag">Emprendimiento</span>
+            <span class="tag">Diseño de contenido</span>
+            <span class="tag">Comunicación</span>
+        </div>
+
+        <div>
+            <h2>Competencias</h2>
+
+            <div class="skill">
+                <div class="skill-name">Tecnologías de información</div>
+                <div class="bar"><span style="width:90%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Docencia y capacitación</div>
+                <div class="bar"><span style="width:90%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Bases de datos</div>
+                <div class="bar"><span style="width:85%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Gestión de proyectos</div>
+                <div class="bar"><span style="width:80%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Marketing y comunicación</div>
+                <div class="bar"><span style="width:85%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Creación de contenido</div>
+                <div class="bar"><span style="width:90%"></span></div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Herramientas y tecnologías</h2>
+
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">SQL</span>
+            <span class="tag">SGBD</span>
+            <span class="tag">HTML</span>
+            <span class="tag">Markdown</span>
+            <span class="tag">Moodle</span>
+            <span class="tag">IA generativa</span>
+            <span class="tag">Diseño digital</span>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="main">
+
+        <header class="header">
+            <h1>[NOMBRE COMPLETO]</h1>
+            <h3>Profesional de Tecnologías de Información | Docencia | Innovación | Emprendimiento</h3>
+        </header>
+
+
+        <!-- PERFIL -->
+        <section class="section">
+
+            <h2 class="section-title">Perfil profesional</h2>
+
+            <p class="profile-text">
+                Profesional orientado al área de tecnologías de información, docencia,
+                innovación y desarrollo de proyectos. Cuenta con experiencia en la
+                preparación de materiales educativos, diseño de contenidos digitales,
+                acompañamiento académico y desarrollo de recursos para estudiantes.
+
+                Su perfil combina conocimientos tecnológicos con habilidades de
+                comunicación, organización, creatividad y resolución de problemas.
+
+                Ha participado en actividades relacionadas con el
+                <span class="highlight">Tecnológico Nacional de México</span>,
+                particularmente en el desarrollo de materiales y recursos para
+                estudiantes de Ingeniería en Sistemas Computacionales.
+            </p>
+
+            <p class="profile-text">
+                También posee experiencia práctica en emprendimiento, administración
+                de un pequeño negocio, atención al cliente, ventas, marketing digital,
+                creación de promociones y gestión de comunicación mediante redes
+                sociales y WhatsApp.
+            </p>
+
+        </section>
+
+
+        <!-- EXPERIENCIA -->
+        <section class="section">
+
+            <h2 class="section-title">Experiencia y actividades profesionales</h2>
+
+            <div class="timeline-item">
+
+                <div class="date">ACTUALIDAD</div>
+
+                <h3>Docencia y acompañamiento académico</h3>
+
+                <p>
+                    Participación en actividades académicas relacionadas con el
+                    <strong>TecNM</strong> y la formación de estudiantes de
+                    <strong>Ingeniería en Sistemas Computacionales</strong>.
+                </p>
+
+                <ul>
+                    <li>Diseño de materiales didácticos y recursos visuales.</li>
+                    <li>Preparación de contenidos para cursos y unidades académicas.</li>
+                    <li>Elaboración de materiales para Moodle.</li>
+                    <li>Desarrollo de contenidos relacionados con bases de datos.</li>
+                    <li>Preparación de recursos para tutorías.</li>
+                    <li>Orientación a estudiantes sobre carga académica y organización de horarios.</li>
+                    <li>Creación de materiales visuales para facilitar el aprendizaje.</li>
+                </ul>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="date">ACTIVIDAD EMPRENDEDORA</div>
+
+                <h3>Gestión y marketing — Snack to Go / Botana para llevar</h3>
+
+                <p>
+                    Participación en la gestión integral de un emprendimiento de
+                    alimentos en Progreso, Yucatán, enfocado en carnes al carbón y
+                    alimentos para llevar.
+                </p>
+
+                <ul>
+                    <li>Administración de ventas y atención al cliente.</li>
+                    <li>Gestión de pedidos por teléfono y WhatsApp.</li>
+                    <li>Diseño de promociones y campañas publicitarias.</li>
+                    <li>Creación de contenido para Facebook, Instagram y WhatsApp.</li>
+                    <li>Diseño y actualización de menús.</li>
+                    <li>Definición y comunicación de precios y promociones.</li>
+                    <li>Creación de estrategias para mantener y atraer clientes.</li>
+                    <li>Coordinación de entregas mediante repartidor independiente.</li>
+                    <li>Comunicación directa con clientes y seguimiento de pedidos.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOCENCIA -->
+        <section class="section">
+
+            <h2 class="section-title">Experiencia académica y docente</h2>
+
+            <div class="project">
+
+                <h3>Taller de Base de Datos</h3>
+
+                <p>
+                    Desarrollo de materiales didácticos y recursos visuales para
+                    unidades relacionadas con bases de datos, SQL procedural,
+                    tecnologías de conexión y sistemas gestores de bases de datos.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Git y control de versiones</h3>
+
+                <p>
+                    Elaboración de recursos educativos para explicar el ciclo de vida
+                    de Git, incluyendo los conceptos de working tree, staging,
+                    commit y servidor, así como el uso de
+                    <strong>git reset --soft, --mixed y --hard</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Tutorías para estudiantes</h3>
+
+                <p>
+                    Creación de recursos visuales y materiales de apoyo para
+                    estudiantes de tercer semestre, incluyendo temas como
+                    <strong>trabajo en equipo bajo presión</strong>.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section class="section">
+
+            <h2 class="section-title">Proyectos destacados</h2>
+
+            <div class="project">
+
+                <h3>Sin Nubes</h3>
+
+                <p>
+                    Propuesta de aplicación orientada al diagnóstico temprano de
+                    niveles bajos de depresión. El concepto contempla un modelo
+                    gratuito dirigido al público general y un modelo institucional
+                    para empresas u organizaciones.
+                </p>
+
+                <p>
+                    El proyecto contempla diferentes paneles de usuario y
+                    administración para facilitar el seguimiento institucional.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Materiales educativos digitales</h3>
+
+                <p>
+                    Desarrollo de recursos visuales para cursos académicos,
+                    incluyendo infografías, banners, posters, esquemas y material
+                    de apoyo para plataformas educativas.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Contenido para emprendimientos</h3>
+
+                <p>
+                    Desarrollo de conceptos publicitarios, campañas, menús,
+                    promociones, piezas gráficas y contenido para redes sociales
+                    aplicado principalmente al sector gastronómico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HABILIDADES -->
+        <section class="section">
+
+            <h2 class="section-title">Habilidades profesionales</h2>
+
+            <ul>
+                <li>Diseño y estructuración de material educativo.</li>
+                <li>Comunicación con estudiantes y clientes.</li>
+                <li>Creación de contenido digital.</li>
+                <li>Marketing para pequeños negocios.</li>
+                <li>Gestión de redes sociales.</li>
+                <li>Atención y seguimiento de clientes.</li>
+                <li>Organización de información.</li>
+                <li>Diseño de material visual.</li>
+                <li>Uso de herramientas de inteligencia artificial generativa.</li>
+                <li>Documentación técnica y académica.</li>
+                <li>Resolución de problemas.</li>
+                <li>Trabajo colaborativo.</li>
+                <li>Gestión de proyectos.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- TECNOLOGÍAS -->
+        <section class="section">
+
+            <h2 class="section-title">Conocimientos tecnológicos</h2>
+
+            <ul>
+                <li><strong>Control de versiones:</strong> Git y GitHub.</li>
+                <li><strong>Bases de datos:</strong> SQL, SQL procedural y SGBD.</li>
+                <li><strong>Desarrollo web:</strong> HTML y Markdown.</li>
+                <li><strong>Plataformas educativas:</strong> Moodle.</li>
+                <li><strong>Inteligencia artificial:</strong> uso de herramientas de IA generativa para creación, diseño y productividad.</li>
+                <li><strong>Diseño digital:</strong> creación y adaptación de material gráfico para medios digitales.</li>
+                <li><strong>Comunicación digital:</strong> Facebook, Instagram y WhatsApp.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- EMPRENDIMIENTO -->
+        <section class="section">
+
+            <h2 class="section-title">Perfil emprendedor</h2>
+
+            <p>
+                Experiencia en la operación y promoción de un negocio gastronómico,
+                participando principalmente en las áreas de
+                <strong>ventas, atención al cliente, marketing, comunicación,
+                diseño de promociones y gestión de pedidos</strong>.
+            </p>
+
+            <p>
+                Capacidad para transformar necesidades comerciales en materiales
+                visuales y estrategias de comunicación orientadas a clientes,
+                especialmente mediante redes sociales y mensajería instantánea.
+            </p>
+
+        </section>
+
+
+        <!-- FORMACIÓN -->
+        <section class="section">
+
+            <h2 class="section-title">Formación académica</h2>
+
+            <div class="timeline-item">
+
+                <h3>[TÍTULO / GRADO ACADÉMICO]</h3>
+
+                <div class="date">[INSTITUCIÓN] · [AÑO]</div>
+
+                <p>
+                    [Agregar información sobre estudios, especializaciones,
+                    certificaciones o posgrados.]
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICACIONES -->
+        <section class="section">
+
+            <h2 class="section-title">Cursos y certificaciones</h2>
+
+            <ul>
+                <li>[Curso / certificación]</li>
+                <li>[Curso / certificación]</li>
+                <li>[Curso / certificación]</li>
+            </ul>
+
+        </section>
+
+
+        <!-- IDIOMAS -->
+        <section class="section">
+
+            <h2 class="section-title">Idiomas</h2>
+
+            <ul>
+                <li><strong>Español:</strong> Nativo</li>
+                <li><strong>Inglés:</strong> [Nivel]</li>
+            </ul>
+
+        </section>
+
+
+        <div class="footer">
+            Currículum Vitae · [NOMBRE COMPLETO] · [AÑO]
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+```
