@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Edgar Alejandro Sagundo Duarte</title>
+    <style>
+        :root {
+            --primary-color: #1e293b;
+            --accent-color: #2563eb;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--text-color);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 8px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 6px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.05rem;
+        }
+
+        .company-name {
+            color: var(--accent-color);
+            font-style: italic;
+        }
+
+        .job-details {
+            display: flex;
+            justify-content: space-between;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin: 8px 0 20px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skills-category {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skills-category h3 {
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <header>
+            <h1>Edgar Alejandro Sagundo Duarte</h1>
+            <p class="subtitle">[Tu Título Profesional / Especialidad]</p>
+            
+            <div class="contact-info">
+                <span>📧 edgar.sagundo@ejemplo.com</span>
+                <span>📱 +52 000 000 0000</span>
+                <span>📍 [Tu Ciudad, País]</span>
+                <span>🔗 linkedin.com/in/edgarsagundo</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Perfil Profesional</h2>
+            <p>
+                [Resumen profesional de 3 a 4 líneas destacando tus años de experiencia, áreas clave de conocimiento, principales logros y la propuesta de valor que ofreces a las organizaciones.]
+            </p>
+        </section>
+
+        <section>
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="job">
+                <div class="job-title">[Nombre del Puesto Principal]</div>
+                <div class="job-details">
+                    <span class="company-name">[Nombre de la Empresa]</span>
+                    <span>📍 [Ciudad, País] | 🗓️ [Mes Año] – Actualidad</span>
+                </div>
+                <ul>
+                    <li>Inicia con un verbo de acción (ej. <i>Lideré, Optimicé, Diseñé</i>) seguido del proyecto y métricas de impacto alcanzadas.</li>
+                    <li>Descripción de responsabilidades principales y uso de metodologías o herramientas clave.</li>
+                    <li>Colaboración estratégica con equipos multidisciplinarios para el logro de objetivos.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">[Nombre del Puesto Anterior]</div>
+                <div class="job-details">
+                    <span class="company-name">[Nombre de la Empresa]</span>
+                    <span>📍 [Ciudad, País] | 🗓️ [Mes Año] – [Mes Año]</span>
+                </div>
+                <ul>
+                    <li>Logro destacado enfocado en resolución de problemas o incremento de productividad.</li>
+                    <li>Gestión y ejecución de tareas estratégicas clave.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Técnicas / Hard Skills</h3>
+                    <p>[Herramientas, softwares, metodologías, lenguajes]</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Interpersonales / Soft Skills</h3>
+                    <p>Liderazgo, Resolución de Problemas, Comunicación Efectiva, Trabajo en Equipo</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Educación</h2>
+            <div class="job-title">[Título Universitario / Grado Académico]</div>
+            <div class="job-details">
+                <span class="company-name">[Nombre de la Institución / Universidad]</span>
+                <span>🗓️ [Año de inicio] – [Año de fin]</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certificaciones e Idiomas</h2>
+            <ul>
+                <li><b>[Certificación o Curso Relevante]</b> – [Entidad Emisora] <i>([Año])</i></li>
+                <li><b>Español:</b> Nativo</li>
+                <li><b>Inglés:</b> [Nivel: ej. Avanzado (C1) / Intermedio (B2)]</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
